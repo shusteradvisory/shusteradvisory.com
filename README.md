@@ -12,6 +12,7 @@ patient information goes in this repo.
   re-copy when the master changes.
 - `assets/matt-shuster.jpg`: the headshot, resized from
   `brand/matt-shuster-headshot.jpg` (master).
-- `assets/shuster-logo.png` and `assets/shuster-logo-email.png` are not used by
+- `assets/shuster-logo.png`, `assets/shuster-logo-email.png` and
+  `assets/shuster-icon-email.png` are not used by
   the page; they are hosted so tools
   that take an image URL (Gmail signature) can link to it.
