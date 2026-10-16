@@ -10,4 +10,7 @@ patient information goes in this repo.
 - `assets/`: logo and icon files are copies of `brand/` in the private
   consultant-workspace repo, which is the master. Don't edit them here;
   re-copy when the master changes.
-- `assets/matt-shuster.jpg`: the headshot. This repo is its master copy.
+- `assets/matt-shuster.jpg`: the headshot, resized from
+  `brand/matt-shuster-headshot.jpg` (master).
+- `assets/shuster-logo.png` is not used by the page; it's hosted so tools
+  that take an image URL (Gmail signature) can link to it.
