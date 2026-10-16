@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shuster Advisory</title>
 <meta name="description" content="Shuster Advisory helps owner-operators put AI to work in how they run the business. Matt Shuster, founder.">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <link rel="icon" type="image/svg+xml" href="assets/shuster-icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/shuster-icon-180.png">
@@ -17,31 +17,22 @@
 <meta property="og:image" content="https://shusteradvisory.com/assets/shuster-icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: a single calling-card column; name, one line, who, how to reach. */
+/* Layout: a single calling-card column on warm paper; the about block sits in a soft card. */
 :root {
-  --bg: #f4f6f6;
+  --bg: #faf6f0;
   --surface: #ffffff;
-  --ink: #15232a;
-  --muted: #55656c;
-  --rule: #d5dddf;
+  --warm: #f2e9dc;
+  --ink: #1f2a2e;
+  --muted: #6a645c;
+  --rule: #e6ddd0;
   --accent: #1e6b58;
-  --accent-soft: #e2efea;
+  --accent-soft: #e4efe8;
   --logo-dot: #6cc3a8;
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #10181c; --surface: #172227; --ink: #e4ecee; --muted: #9aabb1;
-    --rule: #2a3a40; --accent: #6cc3a8; --accent-soft: #1b3330; --logo-dot: #1e6b58; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #10181c; --surface: #172227; --ink: #e4ecee; --muted: #9aabb1;
-  --rule: #2a3a40; --accent: #6cc3a8; --accent-soft: #1b3330; --logo-dot: #1e6b58; color-scheme: dark;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body {
@@ -52,40 +43,40 @@ body {
   padding-inline: 20px; padding-block: 0;
 }
 .wrap { max-width: 680px; margin: 0 auto; }
-header.top { display: flex; align-items: center; gap: 12px; padding-block: 28px 20px; border-bottom: 1px solid var(--rule); }
+header.top { display: flex; align-items: center; gap: 12px; padding-block: 28px 20px; }
 header.top svg { width: 36px; height: 36px; flex: none; }
 .brand-rule { display: inline-block; width: 1px; height: 0.9em; background: var(--accent); margin: 0 10px; vertical-align: -0.1em; }
 .brand-adv { font-weight: 400; opacity: 0.75; }
 .brand { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; letter-spacing: 0.01em; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-.label { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.label { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 h1, h2 { font-family: var(--font-display); font-weight: 400; text-wrap: balance; line-height: 1.15; }
 h1 { font-size: clamp(2.3rem, 7vw, 3.3rem); margin: 14px 0 18px; }
 h2 { font-size: clamp(1.5rem, 4vw, 1.9rem); margin: 0 0 4px; }
 p { margin: 0 0 14px; max-width: 62ch; }
 .lede { font-size: 1.15rem; color: var(--muted); }
 
-section { padding-block: 52px; border-bottom: 1px solid var(--rule); }
-section.hero { padding-block: 64px 56px; }
+section { padding-block: 40px; }
+section.hero { padding-block: 56px 32px; }
 
-.about { display: grid; grid-template-columns: 120px 1fr; gap: 28px; align-items: start; }
+.about { display: grid; grid-template-columns: 140px 1fr; gap: 32px; align-items: center; background: var(--warm); border-radius: 20px; padding: 32px; }
 .about > div { min-width: 0; }
 .photo { object-fit: cover; display: block;
-  width: 120px; height: 120px; border-radius: 50%; background: var(--accent-soft);
+  width: 140px; height: 140px; border-radius: 50%; background: var(--accent-soft); border: 4px solid var(--surface); box-shadow: 0 6px 20px rgba(60, 40, 20, 0.12);
   display: grid; place-items: center; font-family: var(--font-display); font-size: 2.4rem; color: var(--accent);
 }
 .role { color: var(--muted); margin-bottom: 16px; }
-@media (max-width: 520px) { .about { grid-template-columns: 1fr; gap: 18px; } }
+@media (max-width: 520px) { .about { grid-template-columns: 1fr; gap: 18px; padding: 24px; } }
 
 .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px; }
-.email { font-family: var(--font-mono); font-size: 1.05rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 10px 14px; user-select: all; word-break: break-all; }
-button.copy { font: inherit; font-size: 0.92rem; font-weight: 500; cursor: pointer; background: var(--accent); color: var(--bg); border: 0; border-radius: 4px; padding: 11px 16px; }
+.email { font-family: var(--font-body); font-size: 1.05rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 999px; padding: 10px 18px; user-select: all; word-break: break-all; }
+button.copy { font: inherit; font-size: 0.92rem; font-weight: 500; cursor: pointer; background: var(--accent); color: #ffffff; border: 0; border-radius: 999px; padding: 11px 20px; }
 button.copy:hover { filter: brightness(1.08); }
 .copied { font-size: 0.88rem; color: var(--muted); }
 .note { font-size: 0.9rem; color: var(--muted); margin-top: 14px; }
 
-footer { padding-block: 28px 40px; font-size: 0.85rem; color: var(--muted); }
+footer { border-top: 1px solid var(--rule); padding-block: 28px 40px; font-size: 0.85rem; color: var(--muted); }
 </style>
 </head>
 
@@ -106,8 +97,8 @@ footer { padding-block: 28px 40px; font-size: 0.85rem; color: var(--muted); }
     <div class="about">
       <img class="photo" src="assets/matt-shuster.jpg" alt="Matt Shuster" width="120" height="120">
       <div>
-        <h2>Matt Shuster</h2>
-        <div class="role">Founder, Shuster Advisory</div>
+        <h2>Hi, I'm Matt.</h2>
+        <div class="role">Matt Shuster, founder of Shuster Advisory</div>
         <p>I've worked in AI for about four years and in healthcare technology for the last two and a half, after ten years selling to software developers. I can explain this work to you, your office manager, and your IT person in the same afternoon.</p>
       </div>
     </div>
@@ -115,7 +106,8 @@ footer { padding-block: 28px 40px; font-size: 0.85rem; color: var(--muted); }
 
   <section id="contact">
     <div class="label">Contact</div>
-    <h2>Get in touch</h2>
+    <h2>Let's talk</h2>
+    <p>Email is the easiest way to reach me.</p>
     <div class="contact">
       <span class="email" id="email">matt@shusteradvisory.com</span>
       <button class="copy" id="copy-email" type="button">Copy email</button>
