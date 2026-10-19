@@ -229,6 +229,7 @@
   }
 
   .bm-outs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .bm-outs.four { grid-template-columns: repeat(2, 1fr); gap: 12px 16px; }
 
   .bm-out { font-size: 0.85rem; line-height: 1.4; color: var(--ink-muted); }
   .bm-out strong { display: block; color: var(--ink); font-size: 0.92rem; text-wrap: balance; }
@@ -570,22 +571,22 @@
 
   <header class="masthead">
     <h1>Matt's Owner-Operator Second Brain Guide</h1>
-    <p class="standfirst">A working memory for running your business. It keeps what your calls, your email, your numbers and your own thinking taught it, and it gets sharper every week.</p>
+    <p class="standfirst">An AI chief of staff for your business. It reads your calls, email and numbers, briefs you every morning, and drafts from what it knows.</p>
     <div class="byline">By Matt&nbsp;Shuster · <a href="mailto:matt@shusteradvisory.com">matt@shusteradvisory.com</a><br>Based on <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">Andrej Karpathy's LLM wiki&nbsp;pattern</a>.</div>
   </header>
 
   <section>
-    <p class="lede">Most of what you need to run the business is in your head, or somewhere you never get back to: what a customer asked for on a call last month, the price a supplier quoted in the spring, the problem an employee mentioned in passing that you meant to deal with. By Friday it's buried in an inbox, a voicemail or a notebook, or it was never written down at all.</p>
-    <p>Most AI starts cold, so you re-explain your business and get generic answers. Connecting your email and call recorder helps, but it still pieces each answer together on the spot, keeps no record of what was decided and why, and does nothing until you ask.</p>
-    <p><strong>This is the same AI working as your chief of staff. It's been in every call and inbox you connect, and it remembers what was said, what was decided, and why.</strong> It briefs you, drafts for you and flags what you'd want to know. After a month, that looks like this:</p>
+    <p class="lede">Much of what you need to run the business is in your head, or somewhere you never get back to: what a customer asked for on a call last month, the price a supplier quoted in the spring, the problem an employee mentioned in passing that you meant to deal with. By Friday it's buried in an inbox, a voicemail or a notebook, or it was never written down at all.</p>
+    <p>Out of the box, AI starts cold: you re-explain your business, get generic answers, and it does nothing until you ask. Connecting your email helps, but it still pieces each answer together on the spot and keeps no record of what was decided and why.</p>
+    <p><strong>This is the same AI working as your chief of staff. It's been in every call and email label you connect, and it remembers what was said, what was decided, and why.</strong> It briefs you, drafts for you and flags what you'd want to know. Here's what that looks like:</p>
     <div class="vignettes">
-      <div class="vignette">
-        <div class="when">Overnight</div>
-        <div>Yesterday's calls with a customer and a supplier, and the email thread after them, are already filed on the customer's page and the supplier's page before you're up.</div>
-      </div>
       <div class="vignette">
         <div class="when">Who's waiting</div>
         <div>Your morning briefing lists every quote, callback and promise from last week's calls and email that nobody has closed out, with who's waiting and for how long.</div>
+      </div>
+      <div class="vignette">
+        <div class="when">Behind on email</div>
+        <div>You ask it to draft replies to the email threads it reads. A plain AI reply says “thanks for reaching out.” This one mentions the March quote and the Tuesday job you promised. You copy it into your email, or tell it to save it as a draft.</div>
       </div>
       <div class="vignette">
         <div class="when">A price change</div>
@@ -593,7 +594,7 @@
       </div>
       <div class="vignette">
         <div class="when">A pattern</div>
-        <div>You mention two customers cancelled this month. It points out a third said the same thing on a call in the spring, right after you changed how you schedule, and links both conversations. Nobody asked; it noticed.</div>
+        <div>You mention two customers cancelled this month. It points out a third said the same thing on a call in the spring, right after you changed how you schedule, and links both conversations.</div>
       </div>
       <div class="vignette">
         <div class="when">Your own thinking</div>
@@ -604,18 +605,18 @@
 
   <section>
     <div class="eyebrow">What it is</div>
-    <h2>A self-maintaining memory with two halves</h2>
-    <p>In plain terms: a set of pages it writes and keeps up to date, stored in your own private repository.</p>
-    <figure class="brainmap" role="img" aria-label="Your calls, email, calendar, drive, numbers and conversations with it are read every morning and filed into pages in your own private repository. It connects them to answer questions no single system can, and to raise ones you hadn't thought to ask. You keep sensitive details out by choosing what to connect.">
+    <h2>A memory that keeps itself up to date</h2>
+    <p>Your second brain is a set of pages Claude writes and keeps current about your business, stored in a private folder on GitHub (GitHub calls the folder a repository), plus the instructions and routines that keep it running.</p>
+    <figure class="brainmap" role="img" aria-label="Your calls, email, calendar, drive, numbers and conversations with it are read every morning and filed into pages in your own private repository, following standing instructions, on routines that run on a schedule. It connects them to answer questions no single system can, and to raise ones you hadn't thought to ask. You keep sensitive details out by choosing what to connect.">
       <div class="bm-block">
-        <div class="bm-label">Half one · What it reads</div>
+        <div class="bm-label">What it reads</div>
         <div class="bm-chips">
           <span class="bm-chip">Recorded calls</span>
           <span class="bm-chip">Email</span>
           <span class="bm-chip">Calendar</span>
           <span class="bm-chip">Drive</span>
           <span class="bm-chip">Your numbers</span>
-          <span class="bm-chip">Your talks with it</span>
+          <span class="bm-chip">Your conversations with it</span>
           <span class="bm-chip">News you ask it to watch</span>
         </div>
         <div class="aside">Only the folders, labels, channels and meetings you pick.</div>
@@ -623,10 +624,10 @@
       </div>
       <div class="bm-arrow">
         <svg width="16" height="30" viewBox="0 0 16 30" aria-hidden="true"><line x1="8" y1="1" x2="8" y2="22" stroke="currentColor" stroke-width="2"/><polygon points="2,20 14,20 8,29" fill="currentColor"/></svg>
-        <span>Early every morning it reads what's new and updates the pages</span>
+        <span>Every morning a routine reads what's new and updates the pages</span>
       </div>
       <div class="bm-block pages">
-        <div class="bm-label">Half two · The pages, in your own private repository</div>
+        <div class="bm-label">The memory · pages in your own private repository</div>
         <div class="bm-tiles">
           <span class="bm-tile">Top customers</span>
           <span class="bm-tile">Suppliers</span>
@@ -638,20 +639,29 @@
           <span class="bm-tile">Decisions</span>
         </div>
       </div>
+      <div class="bm-block" style="margin-top:10px">
+        <div class="bm-label">What keeps it running</div>
+        <div class="bm-outs">
+          <div class="bm-out"><strong>Standing instructions</strong>A file the setup prompt writes once: what it reads, what it never saves, how it talks to you. Every session and routine starts from it.</div>
+          <div class="bm-out"><strong>Routines</strong>Jobs on a schedule. A daily update files what's new and rebuilds your briefing; a weekly check tidies the pages. Add your own by asking.</div>
+          <div class="bm-out"><strong>Saved formats</strong>Teach it your briefing or monthly update once. It comes out the same way every time, in your voice.</div>
+        </div>
+      </div>
       <div class="bm-arrow">
         <svg width="16" height="30" viewBox="0 0 16 30" aria-hidden="true"><line x1="8" y1="1" x2="8" y2="22" stroke="currentColor" stroke-width="2"/><polygon points="2,20 14,20 8,29" fill="currentColor"/></svg>
-        <span>It connects what no single system holds. Ask from your phone or browser.</span>
+        <span>Ask it anything, from your phone or browser</span>
       </div>
       <div class="bm-block">
         <div class="bm-label">What you get</div>
-        <div class="bm-outs">
+        <div class="bm-outs four">
           <div class="bm-out"><strong>Answers you couldn't get before</strong>Why does the same customer complaint keep coming back? It pulls from calls, email and your numbers at once, and shows where each piece came from.</div>
           <div class="bm-out"><strong>Questions you didn't know to ask</strong>A morning briefing on what changed, who's waiting on you, and what needs your call.</div>
+          <div class="bm-out"><strong>Drafts that know your business</strong>Replies, call prep and quotes start from the customer's history and what you've decided. Tell it what changed and why, and the next draft knows.</div>
           <div class="bm-out"><strong>Dashboards, reports and pages</strong>Built when you ask, kept current at fixed links, shared only when you choose.</div>
         </div>
       </div>
     </figure>
-    <p>You work with it in Claude Code: at <a href="https://claude.ai/code">claude.ai/code</a> in a browser, in the Code tab of the Claude app on your phone, or in the Claude desktop app with the session set to Cloud.</p>
+    <p>You work with it in Claude Code, the part of Claude that can read and write that folder: at <a href="https://claude.ai/code">claude.ai/code</a> in a browser, in the Code tab of the Claude app on your phone, or in the Claude desktop app with the session set to Cloud.</p>
   </section>
 
   <section>
@@ -682,7 +692,7 @@
       <div class="step">
         <div class="what">
           <div>Pick <strong>second-brain</strong> from the repository selector, set the model to <kbd>Sonnet</kbd> and the mode dropdown to <kbd>Auto</kbd>, and paste the prompt below.</div>
-          <div class="sub">It plays back your answers from the form, asks anything you left blank, then builds itself around them. You may still need to allow a bunch of permission requests, but it's quick.</div>
+          <div class="sub">It plays back your answers from the form, asks anything you left blank, then builds itself around them. It will ask permission a few times; click Allow.</div>
         </div>
       </div>
       <div class="step">
@@ -690,7 +700,7 @@
           <div>Connect whatever you want it to read from.</div>
           <div class="sub">Setup ends by telling you what to connect first, based on your answers.</div>
           <div class="sub">Email, your drive, your calendar and whatever records your calls: Gmail or Outlook, Google Drive or OneDrive, Fireflies or Otter. Connect what you have today and add more whenever you like.</div>
-          <div class="sub">Then name what's in scope: specific meetings, specific folders, specific email labels and channels. Not the whole inbox. It reads everything you connect, so pick the scope first. If nobody records your calls, start with email and a weekly report from the software you run jobs or bookings in.</div>
+          <div class="sub">Then name what's in scope: specific meetings, specific folders, specific email labels and channels. Not the whole inbox. If nobody records your calls, start with email and a weekly report from the software you run jobs or bookings in.</div>
           <div class="sub">Then point it at your first real material: "read everything in the Pricing folder on my drive." If something lives nowhere it can reach, open your repository on github.com, click <kbd>Add file</kbd> then <kbd>Upload files</kbd>, and drag it in.</div>
         </div>
       </div>
@@ -707,9 +717,9 @@
   </section>
 
   <section id="setup-prompt">
-    <div class="eyebrow">Paste this once</div>
-    <h2>The setup prompt</h2>
-    <p class="aside">A few questions first. Your answers get written into your prompt, so setup skips what you've already said. They also go to Matt, so if you ever reach out, he already knows the basics. He won't put you on a list. Only name and email are required.</p>
+    <div class="eyebrow">Before you paste</div>
+    <h2>Your setup prompt</h2>
+    <p class="aside">A few questions first. Your answers get written into your prompt, so setup skips what you've already said. They also go to Matt, so if you ever reach out, he already knows the basics.</p>
 
     <form id="intake" class="intake" novalidate>
       <div class="field two">
@@ -788,10 +798,6 @@
         <div class="how">What changed with your biggest customers and suppliers last week, what came out of your team meetings, and what's due: quotes waiting on an answer, renewals, bills, licenses. Rebuilt at 6am Monday.</div>
       </div>
       <div class="idea">
-        <div class="name">Who's waiting on you</div>
-        <div class="how">Every open quote, callback and promise from your calls and email, oldest first. It drops off when the email or call that closes it comes in.</div>
-      </div>
-      <div class="idea">
         <div class="name">Where new business comes from</div>
         <div class="how">Send it weekly totals: ad spend, inquiries and sales by source. It tracks what each new customer costs, which sources are growing or slipping, and where people drop off before they buy.</div>
       </div>
@@ -812,7 +818,7 @@
         <div class="how">Everything that changed this week, in ten bullets, on your phone Friday afternoon.</div>
       </div>
     </div>
-    <p class="aside">It reads what you connect: calls, email, documents, and other business systems where a connection exists. Where a system can't be connected, give it a weekly report and it will track the numbers and tell you what moved. Many systems can email a report on a schedule; send it to a folder or label it reads and the numbers stay current on their own. Where that isn't possible, joining the systems is a build. See <a href="#help">Help from Matt</a>.</p>
+    <p class="aside">If a system can't connect, have it email a weekly report to a folder or label your second brain reads. Joining systems that don't talk to each other is a build; see <a href="#help">Help from Matt</a>.</p>
   </section>
 
   <section>
@@ -836,32 +842,13 @@
         <div>After: "I'm doing too much myself. From my calls and email, tell me which things I keep doing by hand that someone else, or a routine, could take, and start with the one that costs me the most time."</div>
       </div>
     </div>
-    <p>Once a week it'll also suggest one thing worth looking at that you haven't asked about, based on what you've connected and what you've told it matters. Say yes to the ones that matter. That's how it gets more useful than a search box.</p>
-  </section>
-
-  <section>
-    <div class="eyebrow">What's underneath</div>
-    <h2>Three parts, all built by talking</h2>
-    <div class="ideas">
-      <div class="idea">
-        <div class="name">The memory <span class="aka">(aka the knowledge base)</span></div>
-        <div class="how">Everything your calls, documents and numbers taught it, already read and filed. It's why Monday's page isn't a fresh guess every week.</div>
-      </div>
-      <div class="idea">
-        <div class="name">A saved way of doing something <span class="aka">(aka Skills)</span></div>
-        <div class="how">You explain your monthly update once: what's in it, in what order, in your voice. Every update after that comes out the same way.</div>
-      </div>
-      <div class="idea">
-        <div class="name">A standing time it happens <span class="aka">(aka Routines)</span></div>
-        <div class="how">"Every Monday at 6am, rebuild the Monday page." You say it once. From then on, at 6am Monday it reads the memory rather than your inbox, uses the format you taught it, and updates the page at the same link.</div>
-      </div>
-    </div>
+    <p>Once a week it'll also suggest one thing worth looking at that you haven't asked about, based on what you've connected and what you've told it matters. Say yes to the ones that matter.</p>
   </section>
 
   <section id="help">
     <div class="eyebrow">Help from Matt</div>
     <h2>When you want to go further</h2>
-    <p class="lede">Everything above you can do yourself. Once it's running, these are worth thinking about. Ask Matt about any of them.</p>
+    <p class="lede">Everything above you can do yourself. Matt also helps with these; ask about any of them.</p>
     <div class="ideas">
       <div class="idea">
         <div class="name">Set it up for me</div>
@@ -877,12 +864,12 @@
       </div>
       <div class="idea">
         <div class="name">Build what it keeps pointing at</div>
-        <div class="how">Some of its suggestions will name things it can't do alone: a dashboard fed by systems that don't talk to each other, an automation that takes steps off someone's plate, a report from a system it can't reach. Matt can build those.</div>
+        <div class="how">Some of its suggestions will name things it can't do alone: a dashboard fed by systems that don't talk to each other, an automation that takes steps off someone's plate, a report from a system it can't reach. Matt can build those, and what he builds runs on the same memory, so it starts out knowing your customers and your decisions.</div>
       </div>
     </div>
     <div class="beyond">
       <div class="label">Get in touch</div>
-      <p>Stuck, want it set up for you, or ready to take it further? Email Matt at <a href="mailto:matt@shusteradvisory.com">matt@shusteradvisory.com</a>.</p>
+      <p>Questions, or want help with any of this? Email Matt at <a href="mailto:matt@shusteradvisory.com">matt@shusteradvisory.com</a>.</p>
     </div>
   </section>
 
